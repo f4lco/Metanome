@@ -153,6 +153,24 @@ limitations under the License.
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>jitpack</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>git submodule update</id>
+                                <phase>none</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+
+        </profile>
     </profiles>
 
     <properties>
